@@ -15,14 +15,14 @@ function jawab(){
 }
 
 function mengubah(nama,input){
-   var text= nama.toLowerCase().match(/ng|ny|[bcdfghjklmnpqrstvwxyz]?[aiueoé]|[bcdfghjklmnpqrstvwxyz]|[\s]/gi);
+   var text= nama.toLowerCase().match(/ng|ny|[bcdfghjklmnpqrstvwxyz]?[aiueoé]|[bcdfghjklmnpqrstvwxyz]{1}|[\s]/gi);
    console.log(text)
    for (let i = 0; i < text.length - 1; i++) {
-    if (text[i] === 'ny'& text[i] != " ") {
+    if (text[i] === 'ny'& ["a","i","u","e","o","é"].includes(text[i+1])) {
         text[i] = text[i] + text[i + 1]; // Gabungkan ny + a
         text.splice(i + 1, 1);         // Hapus elemen berikutnya
     }
-    else if (text[i] === 'ng' && text[i + 1] != " ") {
+    else if (text[i] === 'ng' & ["a","i","u","e","o","é"].includes(text[i+1])) {
         text[i] = text[i] + text[i + 1]; // Gabungkan ny + a
         text.splice(i + 1, 1);         // Hapus elemen berikutnya
     }}
