@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(220, 221, 221);
+}
+.tombol{
+    border-radius: 10px;
+    width: 50px;
+    height: 20px;
+}

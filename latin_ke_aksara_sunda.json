@@ -1,0 +1,530 @@
+[
+  {
+    "kode": "a",
+    "aksara": "ᮃ"
+  },
+  {
+    "kode": "i",
+    "aksara": "ᮄ"
+  },
+  {
+    "kode": "u",
+    "aksara": "ᮅ"
+  },
+  {
+    "kode": "e",
+    "aksara": "ᮆ"
+  },
+  {
+    "kode": "é",
+    "aksara": "ᮈ"
+  },
+  {
+    "kode": "o",
+    "aksara": "ᮇ"
+  },
+  {
+    "kode": "ka",
+    "aksara": "ᮊ"
+  },
+  {
+    "kode": "ki",
+    "aksara": "ᮊᮤ"
+  },
+  {
+    "kode": "ku",
+    "aksara": "ᮊᮥ"
+  },
+  {
+    "kode": "ké",
+    "aksara": "ᮊᮦ"
+  },
+  {
+    "kode": "ke",
+    "aksara": "ᮊᮨ"
+  },
+  {
+    "kode": "ko",
+    "aksara": "ᮊᮧ"
+  },
+  {
+    "kode": "k",
+    "aksara": "ᮊ᮪"
+  },
+  {
+    "kode": "ga",
+    "aksara": "ᮌ"
+  },
+  {
+    "kode": "gi",
+    "aksara": "ᮌᮤ"
+  },
+  {
+    "kode": "gu",
+    "aksara": "ᮌᮥ"
+  },
+  {
+    "kode": "gé",
+    "aksara": "ᮌᮦ"
+  },
+  {
+    "kode": "ge",
+    "aksara": "ᮌᮨ"
+  },
+  {
+    "kode": "go",
+    "aksara": "ᮌᮧ"
+  },
+  {
+    "kode": "g",
+    "aksara": "ᮌ᮪"
+  },
+  {
+    "kode": "nga",
+    "aksara": "ᮍ"
+  },
+  {
+    "kode": "ngi",
+    "aksara": "ᮍᮤ"
+  },
+  {
+    "kode": "ngu",
+    "aksara": "ᮍᮥ"
+  },
+  {
+    "kode": "ngé",
+    "aksara": "ᮍᮦ"
+  },
+  {
+    "kode": "nge",
+    "aksara": "ᮍᮨ"
+  },
+  {
+    "kode": "ngo",
+    "aksara": "ᮍᮧ"
+  },
+  {
+    "kode": "ng",
+    "aksara": "ᮍ᮪"
+  },
+  {
+    "kode": "ca",
+    "aksara": "ᮎ"
+  },
+  {
+    "kode": "ci",
+    "aksara": "ᮎᮤ"
+  },
+  {
+    "kode": "cu",
+    "aksara": "ᮎᮥ"
+  },
+  {
+    "kode": "cé",
+    "aksara": "ᮎᮦ"
+  },
+  {
+    "kode": "ce",
+    "aksara": "ᮎᮨ"
+  },
+  {
+    "kode": "co",
+    "aksara": "ᮎᮧ"
+  },
+  {
+    "kode": "c",
+    "aksara": "ᮎ᮪"
+  },
+  {
+    "kode": "ja",
+    "aksara": "ᮏ"
+  },
+  {
+    "kode": "ji",
+    "aksara": "ᮏᮤ"
+  },
+  {
+    "kode": "ju",
+    "aksara": "ᮏᮥ"
+  },
+  {
+    "kode": "jé",
+    "aksara": "ᮏᮦ"
+  },
+  {
+    "kode": "je",
+    "aksara": "ᮏᮨ"
+  },
+  {
+    "kode": "jo",
+    "aksara": "ᮏᮧ"
+  },
+  {
+    "kode": "j",
+    "aksara": "ᮏ᮪"
+  },
+  {
+    "kode": "nya",
+    "aksara": "ᮑ"
+  },
+  {
+    "kode": "nyi",
+    "aksara": "ᮑᮤ"
+  },
+  {
+    "kode": "nyu",
+    "aksara": "ᮑᮥ"
+  },
+  {
+    "kode": "nyé",
+    "aksara": "ᮑᮦ"
+  },
+  {
+    "kode": "nye",
+    "aksara": "ᮑᮨ"
+  },
+  {
+    "kode": "nyo",
+    "aksara": "ᮑᮧ"
+  },
+  {
+    "kode": "ny",
+    "aksara": "ᮑ᮪"
+  },
+  {
+    "kode": "ta",
+    "aksara": "ᮒ"
+  },
+  {
+    "kode": "ti",
+    "aksara": "ᮒᮤ"
+  },
+  {
+    "kode": "tu",
+    "aksara": "ᮒᮥ"
+  },
+  {
+    "kode": "té",
+    "aksara": "ᮒᮦ"
+  },
+  {
+    "kode": "te",
+    "aksara": "ᮒᮨ"
+  },
+  {
+    "kode": "to",
+    "aksara": "ᮒᮧ"
+  },
+  {
+    "kode": "t",
+    "aksara": "ᮒ᮪"
+  },
+  {
+    "kode": "da",
+    "aksara": "ᮓ"
+  },
+  {
+    "kode": "di",
+    "aksara": "ᮓᮤ"
+  },
+  {
+    "kode": "du",
+    "aksara": "ᮓᮥ"
+  },
+  {
+    "kode": "dé",
+    "aksara": "ᮓᮦ"
+  },
+  {
+    "kode": "de",
+    "aksara": "ᮓᮨ"
+  },
+  {
+    "kode": "do",
+    "aksara": "ᮓᮧ"
+  },
+  {
+    "kode": "d",
+    "aksara": "ᮓ᮪"
+  },
+  {
+    "kode": "na",
+    "aksara": "ᮔ"
+  },
+  {
+    "kode": "ni",
+    "aksara": "ᮔᮤ"
+  },
+  {
+    "kode": "nu",
+    "aksara": "ᮔᮥ"
+  },
+  {
+    "kode": "né",
+    "aksara": "ᮔᮦ"
+  },
+  {
+    "kode": "ne",
+    "aksara": "ᮔᮨ"
+  },
+  {
+    "kode": "no",
+    "aksara": "ᮔᮧ"
+  },
+  {
+    "kode": "n",
+    "aksara": "ᮔ᮪"
+  },
+  {
+    "kode": "pa",
+    "aksara": "ᮕ"
+  },
+  {
+    "kode": "pi",
+    "aksara": "ᮕᮤ"
+  },
+  {
+    "kode": "pu",
+    "aksara": "ᮕᮥ"
+  },
+  {
+    "kode": "pé",
+    "aksara": "ᮕᮦ"
+  },
+  {
+    "kode": "pe",
+    "aksara": "ᮕᮨ"
+  },
+  {
+    "kode": "po",
+    "aksara": "ᮕᮧ"
+  },
+  {
+    "kode": "p",
+    "aksara": "ᮕ᮪"
+  },
+  {
+    "kode": "ba",
+    "aksara": "ᮘ"
+  },
+  {
+    "kode": "bi",
+    "aksara": "ᮘᮤ"
+  },
+  {
+    "kode": "bu",
+    "aksara": "ᮘᮥ"
+  },
+  {
+    "kode": "bé",
+    "aksara": "ᮘᮦ"
+  },
+  {
+    "kode": "be",
+    "aksara": "ᮘᮨ"
+  },
+  {
+    "kode": "bo",
+    "aksara": "ᮘᮧ"
+  },
+  {
+    "kode": "b",
+    "aksara": "ᮘ᮪"
+  },
+  {
+    "kode": "ma",
+    "aksara": "ᮙ"
+  },
+  {
+    "kode": "mi",
+    "aksara": "ᮙᮤ"
+  },
+  {
+    "kode": "mu",
+    "aksara": "ᮙᮥ"
+  },
+  {
+    "kode": "mé",
+    "aksara": "ᮙᮦ"
+  },
+  {
+    "kode": "me",
+    "aksara": "ᮙᮨ"
+  },
+  {
+    "kode": "mo",
+    "aksara": "ᮙᮧ"
+  },
+  {
+    "kode": "m",
+    "aksara": "ᮙ᮪"
+  },
+  {
+    "kode": "ya",
+    "aksara": "ᮚ"
+  },
+  {
+    "kode": "yi",
+    "aksara": "ᮚᮤ"
+  },
+  {
+    "kode": "yu",
+    "aksara": "ᮚᮥ"
+  },
+  {
+    "kode": "yé",
+    "aksara": "ᮚᮦ"
+  },
+  {
+    "kode": "ye",
+    "aksara": "ᮚᮨ"
+  },
+  {
+    "kode": "yo",
+    "aksara": "ᮚᮧ"
+  },
+  {
+    "kode": "y",
+    "aksara": "ᮚ᮪"
+  },
+  {
+    "kode": "ra",
+    "aksara": "ᮛ"
+  },
+  {
+    "kode": "ri",
+    "aksara": "ᮛᮤ"
+  },
+  {
+    "kode": "ru",
+    "aksara": "ᮛᮥ"
+  },
+  {
+    "kode": "ré",
+    "aksara": "ᮛᮦ"
+  },
+  {
+    "kode": "re",
+    "aksara": "ᮛᮨ"
+  },
+  {
+    "kode": "ro",
+    "aksara": "ᮛᮧ"
+  },
+  {
+    "kode": "r",
+    "aksara": "ᮛ᮪"
+  },
+  {
+    "kode": "la",
+    "aksara": "ᮜ"
+  },
+  {
+    "kode": "li",
+    "aksara": "ᮜᮤ"
+  },
+  {
+    "kode": "lu",
+    "aksara": "ᮜᮥ"
+  },
+  {
+    "kode": "lé",
+    "aksara": "ᮜᮦ"
+  },
+  {
+    "kode": "le",
+    "aksara": "ᮜᮨ"
+  },
+  {
+    "kode": "lo",
+    "aksara": "ᮜᮧ"
+  },
+  {
+    "kode": "l",
+    "aksara": "ᮜ᮪"
+  },
+  {
+    "kode": "wa",
+    "aksara": "ᮝ"
+  },
+  {
+    "kode": "wi",
+    "aksara": "ᮝᮤ"
+  },
+  {
+    "kode": "wu",
+    "aksara": "ᮝᮥ"
+  },
+  {
+    "kode": "wé",
+    "aksara": "ᮝᮦ"
+  },
+  {
+    "kode": "we",
+    "aksara": "ᮝᮨ"
+  },
+  {
+    "kode": "wo",
+    "aksara": "ᮝᮧ"
+  },
+  {
+    "kode": "w",
+    "aksara": "ᮝ᮪"
+  },
+  {
+    "kode": "sa",
+    "aksara": "ᮞ"
+  },
+  {
+    "kode": "si",
+    "aksara": "ᮞᮤ"
+  },
+  {
+    "kode": "su",
+    "aksara": "ᮞᮥ"
+  },
+  {
+    "kode": "sé",
+    "aksara": "ᮞᮦ"
+  },
+  {
+    "kode": "se",
+    "aksara": "ᮞᮨ"
+  },
+  {
+    "kode": "so",
+    "aksara": "ᮞᮧ"
+  },
+  {
+    "kode": "s",
+    "aksara": "ᮞ᮪"
+  },
+  {
+    "kode": "ha",
+    "aksara": "ᮠ"
+  },
+  {
+    "kode": "hi",
+    "aksara": "ᮠᮤ"
+  },
+  {
+    "kode": "hu",
+    "aksara": "ᮠᮥ"
+  },
+  {
+    "kode": "hé",
+    "aksara": "ᮠᮦ"
+  },
+  {
+    "kode": "he",
+    "aksara": "ᮠᮨ"
+  },
+  {
+    "kode": "ho",
+    "aksara": "ᮠᮧ"
+  },
+  {
+    "kode": "h",
+    "aksara": "ᮠ᮪"
+  }
+]
