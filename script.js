@@ -60,17 +60,17 @@ function hasil_aksara(hasil, input){
 }
 function nilai(input){
     if (["apa", "kapan", "dimana", "siapa", "bagaimana"].includes(input)) return 3;
-    if (["bunyi","terbuat", "dibuat", "berasal", "alat", "makanan","angklung","kecapi","jawa","rumah","digunakan","karakteristik","contoh"].includes(input)) return 2;
+    if (["bahasa","kegunaan","fungsi","asal","usul","budaya","persebaran","sunda","wilayah","nilai","falsafah","alam","pakaian","adat","sejarah","nilai-nilai","ciri","khas","musik","tradisional","tokoh","terkenal","cerita","rakyat","rumah","panggung","tujuan","bahan","mainan"].includes(input)) return 2;
     return 1;
 }
 
 function pertanyaan(input){
     console.log("masuk")
-    fetch("artikel.txt")
+    fetch("artikel2.txt")
     .then(res => res.text())
     .then(teks => {
         let kata_tanya = input.match(/\w+/g); // ambil semua kata
-        let kalimat = teks.split(".");
+        let kalimat = teks.split("|");
         console.log("pertanyaan pecah",kata_tanya)
         console.log(kalimat)
         var score = 0
@@ -79,15 +79,24 @@ function pertanyaan(input){
             console.log("cek",score_akhir)
             for(var j =0; j < kata_tanya.length; j++){
                 if (kalimat[i].toLowerCase().includes(kata_tanya[j].toLowerCase())){
+                    score += 1
                     score += nilai(kata_tanya[j])
-                    console.log[kata_tanya[j]]
+                    console.log(kalimat[i],score )
+                    
                 }
             }
             if (score > score_akhir){
                 score_akhir=score
                 console.log("akhir",score_akhir)
+                
                 var jawaban_akhir = kalimat[i]
+                jawaban_akhir= jawaban_akhir.replace(/;/g, "<br>");
+                
             }
+            else if (score_akhir == 0){
+                jawaban_akhir="Saya tidak mengerti, tolong ulangi pertanyaan dengan benar"
+            }
+            
             score = 0
         }
         console.log(jawaban_akhir)
