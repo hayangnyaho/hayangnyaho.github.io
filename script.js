@@ -60,7 +60,7 @@ function hasil_aksara(hasil, input){
 }
 function nilai(input){
     if (["apa", "kapan", "dimana", "siapa", "bagaimana"].includes(input)) return 3;
-    if (["bahasa","kegunaan","fungsi","asal","usul","budaya","persebaran","sunda","wilayah","nilai","falsafah","alam","pakaian","adat","sejarah","nilai-nilai","ciri","khas","musik","tradisional","tokoh","terkenal","cerita","rakyat","rumah","panggung","tujuan","bahan","mainan"].includes(input)) return 2;
+    if (["bahasa","kegunaan","fungsi","asal","usul","budaya","persebaran","sunda","wilayah","nilai","falsafah","alam","pakaian","adat","sejarah","nilai-nilai","ciri","khas","musik","tradisional","tokoh","terkenal","cerita","rakyat","rumah","panggung","tujuan","bahan","mainan","makanan","makna"].includes(input)) return 2;
     return 1;
 }
 
