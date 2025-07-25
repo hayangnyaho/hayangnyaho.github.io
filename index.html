@@ -9,13 +9,27 @@
 
 </head>
 <body>
-    <div class="container">
-        <textarea name="" id="isi" placeholder="tambahkan pagar (#) untuk mengubah huruf ke aksara"></textarea>
-        <button class="tombol" onclick="jawab()">klik</button> <br>
-        <p id="jawab"></p>
-        
+    <div id="bungkus">
+
+        <div id="jawab""></div>
+        <div id="container">
+            <textarea name="" id="isi" placeholder="tambahkan pagar (#) untuk mengubah huruf ke aksara"></textarea>
+            <button class="tombol" onclick="jawab()">Kirim</button> <br>
+            
+        </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        const textarea = document.getElementById('isi');
+      
+        textarea.addEventListener('input', function() {
+          this.style.height = 'auto';  // reset height dulu
+          this.style.height = this.scrollHeight + 'px';  // set height sesuai isi
+        });
+        
+
+    </script>
+
 
     
 </body>

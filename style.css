@@ -1,14 +1,89 @@
-body{
-    background-color: rgb(220, 221, 221);
+body {
+  padding: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(bg.jpg);
+ 
 }
-.tombol{
-    border-radius: 10px;
-    width: 50px;
-    height: 20px;
+
+#bungkus{
+  padding: 20px;
+  margin-right: 100px;
+  margin-left: 100px;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f5f5;
+  border-radius: 10px;
 }
-#isi{
-    width: 90%;
-    margin-right: 20px;
-    height: auto;
-    border-radius: 8px;
+
+#jawab {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column-reverse; /* supaya prepend terlihat naik */
+  padding: 10px, 10px, 10px, 10px;
+}
+
+
+
+textarea {
+  width: 80%;
+  height: auto;
+  padding: 10px;
+  resize: none;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  gap: 10px;
+}
+
+.pesan {
+  background-color: #201dce;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  max-width: 50%;
+  align-self: flex-start;
+}
+
+.soal1 {
+  background-color: #201dce;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  max-width: 50%;
+  align-self: flex-end;
+}
+
+button{
+  padding: 10px, 20px;
+  margin-top: 5px;
+  margin-left: 5px;
+  height: 25px;
+  background-color: rgb(85, 80, 80);
+  color: rgb(252, 249, 249);
+  border: none;
+  border-radius: 180%;
+  
+}
+
+#container {
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20PX;
+  border-radius: 10PX;
+  background-color: black;
+  display: flex;
+  align-items: flex-start;
+ 
 }

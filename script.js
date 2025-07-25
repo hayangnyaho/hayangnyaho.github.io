@@ -6,11 +6,23 @@ function jawab(){
         // hapus semua tanda #
         let teksBersih = input.replace(/#/g, "").trim();
         mengubah(teksBersih, teksBersih);
+        var jawab = document.getElementById("jawab");
+        const pesan = document.createElement("div");
+        pesan.className = "soal1";
+        pesan.innerHTML = teksBersih;
+        jawab.prepend(pesan); // tambahkan ke atas
+        inputTeks.value = "";
     } else {
         // kirim ke pertanyaan
         pertanyaan(input);
+        var jawab = document.getElementById("jawab");
+        const pesan = document.createElement("div");
+        pesan.className = "soal1";
+        pesan.innerHTML = input;
+        jawab.prepend(pesan); // tambahkan ke atas
+        inputTeks.value = "";
+        
     }
-    
 }
 
 function mengubah(nama,input){
@@ -51,7 +63,11 @@ function aksara(nama, input){
 
 function hasil_aksara(hasil, input){
     var jawab = document.getElementById("jawab");
-    jawab.innerHTML= hasil
+    const pesan = document.createElement("div");
+    pesan.className = "pesan";
+    pesan.innerHTML = hasil;
+    jawab.prepend(pesan); // tambahkan ke atas
+    inputTeks.value = "";
 }
 function nilai(input){
     if (["apa", "kapan", "dimana", "siapa", "bagaimana"].includes(input)) return 3;
@@ -102,8 +118,12 @@ function pertanyaan(input){
             const speech = new SpeechSynthesisUtterance(bersih);
             speech.lang = 'id-ID'; // Bahasa Indonesia
             window.speechSynthesis.speak(speech);
-            var jawab = document.getElementById("jawab");
-            jawab.innerHTML= jawaban_akhir
+            var wadah = document.getElementById("jawab");
+            const pesan = document.createElement("div");
+            pesan.className = "pesan";
+            pesan.innerHTML = teks;
+            wadah.prepend(pesan); // tambahkan ke atas
+            inputTeks.value = "";
         }
     })
 }
