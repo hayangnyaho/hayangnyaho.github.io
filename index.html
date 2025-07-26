@@ -25,6 +25,9 @@
         textarea.addEventListener('input', function() {
           this.style.height = 'auto';  // reset height dulu
           this.style.height = this.scrollHeight + 'px';  // set height sesuai isi
+          if (this.value.trim() === '') {
+            this.style.height = "1px";
+        }
         });
         
 

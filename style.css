@@ -9,7 +9,12 @@ body {
   background-image: url(bg.jpg);
  
 }
-
+@media (max-width: 768px) {
+    body { 
+      padding: 10px;
+      margin: 0px;
+      }
+}
 #bungkus{
   padding: 20px;
   margin-right: 100px;
@@ -20,6 +25,11 @@ body {
   flex-direction: column;
   background: #f7f5f5;
   border-radius: 10px;
+}
+@media (max-width: 768px) {
+  #bungkus{
+    margin: 15px;
+  }
 }
 
 #jawab {
@@ -45,24 +55,36 @@ textarea {
   overflow: hidden;
   display: flex;
   gap: 10px;
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  textarea {
+    width: 10px;
+    height: 1px;
+    font-size: 7px;
+  }
 }
 
 .pesan {
-  background-color: #201dce;
+  background-color: rgb(17, 19, 17);
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   max-width: 50%;
   align-self: flex-start;
+  color: white;
 }
 
+
 .soal1 {
-  background-color: #201dce;
+  background-color: rgb(12, 12, 12);
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   max-width: 50%;
   align-self: flex-end;
+  color: white;
 }
 
 button{
@@ -77,6 +99,13 @@ button{
   
 }
 
+@media (max-width: 768px) {
+  button{
+    height: 15px;
+    font-size: 5px;
+  }
+}
+
 #container {
   padding: 10px;
   margin: 10px;
@@ -85,5 +114,10 @@ button{
   background-color: black;
   display: flex;
   align-items: flex-start;
- 
+}
+
+@media (max-width: 768px) {
+  #container{
+    padding-bottom: 20px;
+  }
 }
