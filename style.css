@@ -8,7 +8,7 @@ body {
   margin: 0 100px;
   font-family: 'Segoe UI', sans-serif;
   height: 100vh;
-  background-image: url('bg.jpg'); /* ganti dengan bg nuansa Sunda */
+  background-image: url('bg1.png'); /* ganti dengan bg nuansa Sunda */
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -153,4 +153,5 @@ button {
     font-size: 10px;
   }
 }
+
 
