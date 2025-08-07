@@ -17,9 +17,10 @@
 
         <div id="jawab"">
             <small style="color: gray; font-size: 12px; font-family: 'nunito', noto-serif;">
-            Paké tanda hash (#) pikeun ngarobah téks kana aksara Sunda. Contona: #halo <br>
+            Paké tanda hash (#) pikeun ngarobah téks kana aksara Sunda. Contona: #halo <br>Ketik angka (1) pikeun ngarobah basa Sunda jadi basa Indonesia jeung ketik angka (2) pikeun ngarobah basa Indonesia jadi basa Sunda.<br>Contona "1 abdi resep", atawa "2 saya suka".<br>
 Upami anjeun hoyong naroskeun patarosan langsung, tanyakeun sacara jelas. Conto: "Angklung adalah"<br>
-"Hapunten upami jawabanna henteu cocog sareng patarosan, sabab masih dina tahap pangembangan."<br><br>Gunakan tanda pagar (#) untuk mengubah teks ke aksara Sunda. Contoh: #halo#<br> Jika ingin tanya langsung bertanya dengan jelas. Contoh: angklung adalah <br>
+"Hapunten upami jawabanna henteu cocog sareng patarosan, sabab masih dina tahap pangembangan."<br><br>Gunakan tanda pagar (#) untuk mengubah teks ke aksara Sunda. Contoh: #halo<br> Ketik angka (1) untuk mengubah sunda ke indonesia dan ketik angka (2) untuk ubah indonesia ke sunda <br>
+Contoh "1 abdi resep", atau "2 saya suka". <br> Jika ingin tanya langsung bertanya dengan jelas. Contoh: angklung adalah <br>
             "Maaf jika jawaban tidak sesuai dengan pertanyaan karena masih tahap pengembangan"</small>
 
             <div></div>
@@ -28,6 +29,7 @@ Upami anjeun hoyong naroskeun patarosan langsung, tanyakeun sacara jelas. Conto:
             
             <textarea name="" id="isi" placeholder="Hai kumaha damang, naon anu anjeun hoyong ketik?"></textarea>
             <button class="tombol" onclick="jawab()"><img src="2.png" alt="Kirim" class="ikon">
+            
 </button>
 
             
@@ -40,6 +42,7 @@ Upami anjeun hoyong naroskeun patarosan langsung, tanyakeun sacara jelas. Conto:
         textarea.addEventListener('input', function() {
           this.style.height = 'auto'; 
           this.style.height = this.scrollHeight + 'px'; 
+          
 
           if (this.value.trim() === '') {
             this.style.height = "1px";
