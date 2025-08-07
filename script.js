@@ -43,14 +43,13 @@ function jawab(){
         for (let key in data) {
             kamusTerbalik[data[key]] = key;
         }
-        console.log(kamusTerbalik);
         for (let i = 0; i < teksBersih.length; i++){
             var kar = teksBersih[i].toLowerCase();
             tr = kamusTerbalik[kar] || kar
             hasil += tr
             hasil += " "
         }
-        console.log(hasil)
+        
         bacakan(hasil)
         })
         var jawab = document.getElementById("jawab");
@@ -74,7 +73,7 @@ function jawab(){
             hasil += tr
             hasil += " "
         }
-        console.log(hasil)
+        
         bacakan(hasil)
         })
         var jawab = document.getElementById("jawab");
@@ -110,7 +109,6 @@ function mengubah(nama,input){ // menentuakan akhiran ng dan ny
         text.splice(i + 1, 1);       
     }}
 
-   console.log(text)
    aksara(text,input)
 
 }
@@ -228,12 +226,11 @@ function pertanyaan(input){ // mencari jawaban
     .then(res => res.text())
     .then(teks => {
         let kata_tanya = input.match(/\w+/g); // ambil semua kata
-        console.log(kata_tanya)
         let kalimat = teks.split("|");
         var score = 0
         var score_akhir = 0
         for (var i = 0; i < kalimat.length; i++){
-            console.log(kalimat[i])
+            
             for(var j = 0; j < kata_tanya.length; j++){
                 if (kalimat[i].toLowerCase().includes(kata_tanya[j].toLowerCase())){
                     score += 1  
@@ -244,15 +241,13 @@ function pertanyaan(input){ // mencari jawaban
             if (score > score_akhir){
                 score_akhir = score
                 console.log("nilai dalam if",score_akhir)
-                console.log(kalimat[i])
                 var jawaban = kalimat[i]
                 var jawaban_akhir=jawaban.replace(/;/g, "<br>").trim();
 
             }
             else if(score_akhir <= 1){
                 jawaban_akhir ="Maaf jawaban tidak ada atau pertanyaan yang anda ajukan kurang jelas, tolong tanyakan kembali!"
-            }
-            console.log("diluar",score) 
+            } 
             score=0
 
         }  
@@ -262,7 +257,6 @@ function pertanyaan(input){ // mencari jawaban
 }
 function bacakan(teks) { //menampilkan jawaban ke user dan membacakannya
     var bersih = teks.replace(/<br>/g, "")
-    console.log(bersih)
     const speech = new SpeechSynthesisUtterance(bersih);
     speech.lang = 'id-ID'; // Bahasa Indonesia
     window.speechSynthesis.speak(speech);
