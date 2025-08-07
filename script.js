@@ -182,7 +182,7 @@ function nilai(input){ // memberi score untuk kata kunci
         "tari tradisional",
         "musik tradisional",
         "Kujang",
-        "Golog",
+        "Golok",
         "Bandik",
         "gamelan",
         "kendang",
@@ -230,7 +230,6 @@ function pertanyaan(input){ // mencari jawaban
         var score = 0
         var score_akhir = 0
         for (var i = 0; i < kalimat.length; i++){
-            
             for(var j = 0; j < kata_tanya.length; j++){
                 if (kalimat[i].toLowerCase().includes(kata_tanya[j].toLowerCase())){
                     score += 1  
@@ -240,7 +239,6 @@ function pertanyaan(input){ // mencari jawaban
             }
             if (score > score_akhir){
                 score_akhir = score
-                console.log("nilai dalam if",score_akhir)
                 var jawaban = kalimat[i]
                 var jawaban_akhir=jawaban.replace(/;/g, "<br>").trim();
 
