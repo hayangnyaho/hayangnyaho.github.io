@@ -165,6 +165,7 @@ function hasil_aksara(hasil){ // menampilkan hasil ke user
 function nilai(input){ // memberi score untuk kata kunci
     if (["asal usul",
         "suku",
+        "upacara",
         "aksara",
         "persebaran",
         "bahasa",
@@ -210,16 +211,21 @@ function nilai(input){ // memberi score untuk kata kunci
         "terebang",
         "masakan",
         "makanan",
-        "nasi liwet",
-        "nasi tutug oncom",
+        "nasi",
+        "liwet",
+        "tutug",
+        "oncom",
         "karedok",
         "lotek",
-        "sayur asem",
+        "sayur",
+        "asem",
         "lalapan",
-        "sambal terasi",
+        "sambal",
+        "terasi",
         "pepes ikan",
         "gepuk",
-        "bakakak hayam",
+        "bakakak",
+        "hayam",
         "serabi",
         "cimplung",
         "gemblong",
@@ -230,7 +236,8 @@ function nilai(input){ // memberi score untuk kata kunci
         "kujang",
         "golok",
         "bandik",
-        "wayang golek",
+        "wayang",
+        "golek",
         "longser",
         "sandiwara",
         "reak",
@@ -249,7 +256,7 @@ function nilai(input){ // memberi score untuk kata kunci
         "buyung",
         "ketuk tilu",
         "keurseus",
-        "ronggeng gunung",
+        "ronggeng",
         "fungsi",
         "pelestarian",
         "gunung",
@@ -263,10 +270,70 @@ function nilai(input){ // memberi score untuk kata kunci
 }
 
 
+function pilih(input){ //mencari file yang cocok
+    let text = input.toLowerCase()
+    let kata_tanya = text.match(/\w+/g)// ambil semua kata
+    for(var j = 0; j < kata_tanya.length; j++){
+        let kata = sinonim(kata_tanya[j])
+        if(["upacara","seren Taun","nenjrag","nyaruat","mapag","ngaseuk"].includes(kata)){return "artikel/upacara.txt"}
+        if(["lagu"].includes(kata)){return "artikel/lagu.txt"}
+        if(["rumah","julang","capit","pongpok","badak","tagog","atap","imah"].includes(kata)){return "artikel/rumah adat.txt"}
+        if(["mainan","kaulinan","permainan","congklak","egrang","gasing","dakon","engklek","sondah","oray","ular","bebentengan","benteng","galah","galasin","kelereng"].includes(kata)){return "artikel/mainan.txt"}
+        if(["alat","musik","angklung","calung","kecapi","suling","gendang","kendang","tarawangsa","rebab","karinding","celempung","terebang"].includes(kata)){return "artikel/alat musik.txt"}
+        if(["makanan","masakan","kuliner","nasi","liwet","tutug","oncom","karedok","lotek","sayur","lalapan","asem","sambal","terasi","pepes","gepuk","bakakak","hayam","serabi","cimplung","gemblong"].includes(kata)){return "artikel/makanan.txt"}
+        if(["senjata","kujang","golok","bandik"].includes(kata)){return "artikel/senjata.txt"}
+        if(["pertunjukan","wayang golek","longser","sandiwara","reak","dogdog","benjang","tembang","mamaos"].includes(kata)){return "artikel/pertunjukan.txt"}
+        if(["tari","jaipong","jaipongan","topeng","merak","ketuk tilu","keurseus","ronggeng","priangan"].includes(kata)){return "artikel/tari.txt"}
+        if(["pakaian","baju","iket","sabuk","siger",].includes(kata)){return "artikel/pakaian.txt"}
+        if(["gunung","tangkuban","papandayan","priangan","ciremai"].includes(kata)){return "artikel/gunung.txt"}
+    }
+    return "artikel/umum.txt"
+}
+
+function sinonim(input){
+    if([
+        "makanan", "masakan", "hidangan", "kuliner", "santapan", "menu", "jamuan",
+        "panganan", "sajian", "konsumsi", "cemilan", "jajanan", "kulineran"
+    ].includes(input)){return "makanan"}
+    if([
+        "mainan", "permainan", "kaulinan", "permainan tradisional", "permainan anak",
+        "game", "dolanan", "hiburan anak"
+    ].includes(input)){return "mainan"}
+    if([
+        "lagu", "nyanyian", "tembang", "musik vokal", "lirik", "kidung",
+        "nyanyi", "nyayian", "syair", "vokal"
+    ].includes(input)){return "lagu"}
+    if([
+        "alat musik", "instrumen", "musik", "alat bunyi", "suara musik", "musik tradisional"
+    ].includes(input)){return "musik"}
+    if([
+        "pakaian", "baju", "busana", "sandang", "kostum", "pakaian adat",
+        "pakaian tradisional", "outfit"
+    ].includes(input)){return "pakaian"}
+    if([
+        "senjata", "alat tempur", "perlengkapan perang","senjata tradisional"
+    ].includes(input)){return "senjata"}
+    if([
+        "rumah", "rumah adat", "imah", "bangunan", "tempat tinggal", "hunian",
+        "arsitektur","atap",
+        "rumah sunda", "rumah tradisional"
+    ].includes(input)){return "rumah"}
+    if([
+        "fungsi", "kegunaan", "peran", "tujuan", "guna", "faedah",
+        "arti penting", "kontribusi"
+    ].includes(input)){return "funsi"}
+    if([
+        "macam-macam", "jenis-jenis", "tipe-tipe", "berbagai macam", "ragam",
+        "aneka", "variasi", "bentuk", "kategori", "kelompok", "macamnya", "macam"
+    ].includes(input)){return "macam"}
+    return input
+};
 
 
 function pertanyaan(input){ // mencari jawaban
-    fetch("artikel2.txt")
+    let coba = pilih(input)
+    console.log(coba)
+    fetch(coba)
     .then(res => res.text())
     .then(teks => {
         let kata_tanya = input.match(/\w+/g); // ambil semua kata
@@ -276,10 +343,10 @@ function pertanyaan(input){ // mencari jawaban
         for (var i = 0; i < kalimat.length; i++){
             console.log(kalimat[i])
             for(var j = 0; j < kata_tanya.length; j++){
-              
-                if (kalimat[i].toLowerCase().includes(kata_tanya[j].toLowerCase())){
+                let kata = sinonim(kata_tanya[j])
+                if (kalimat[i].toLowerCase().includes(kata.toLowerCase())){
                     score += 1  
-                    let hasil=nilai(kata_tanya[j])
+                    let hasil=nilai(kata)
                     score += hasil
                 }
             }
