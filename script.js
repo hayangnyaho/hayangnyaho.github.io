@@ -1,6 +1,6 @@
 
 function jawab(){
-    var input = document.getElementById("isi").value.toLowerCase();
+    let input = document.getElementById("isi").value.toLowerCase();
     console.log("pertanyaan awal",input)
     document.getElementById('isi').value = '';
 
@@ -52,7 +52,7 @@ function jawab(){
         
         bacakan(hasil)
         })
-        var jawab = document.getElementById("jawab");
+        let jawab = document.getElementById("jawab");
         const pesan = document.createElement("div");
         pesan.className = "soal1";
         pesan.innerHTML = input;
@@ -66,7 +66,7 @@ function jawab(){
         fetch('kamus.json')
         .then(response => response.json())
         .then(data => {
-        var hasil = ""
+        let hasil = ""
         for (let i = 0; i < teksBersih.length; i++){
             var kar = teksBersih[i].toLowerCase();
             tr = data[kar] || kar
@@ -76,7 +76,7 @@ function jawab(){
         
         bacakan(hasil)
         })
-        var jawab = document.getElementById("jawab");
+        let jawab = document.getElementById("jawab");
         const pesan = document.createElement("div");
         pesan.className = "soal1";
         pesan.innerHTML = input;
@@ -86,7 +86,7 @@ function jawab(){
     }
     else { // pillihan pertanyaan
         pertanyaan(input);
-        var jawab = document.getElementById("jawab");
+        let jawab = document.getElementById("jawab");
         const pesan = document.createElement("div");
         pesan.className = "soal1";
         pesan.innerHTML = input;
@@ -155,7 +155,7 @@ function aksara(nama, input){// mengubah laten ke aksara
 // }
 
 function hasil_aksara(hasil){ // menampilkan hasil ke user
-    var jawab = document.getElementById("jawab");
+    let jawab = document.getElementById("jawab");
     const pesan = document.createElement("div");
     pesan.className = "pesan";
     pesan.innerHTML = hasil;
@@ -164,62 +164,106 @@ function hasil_aksara(hasil){ // menampilkan hasil ke user
 }
 function nilai(input){ // memberi score untuk kata kunci
     if (["asal usul",
-        "makanan",
-        "masakan",
-        "Wayang Golek",
-        "Sandiwara Sunda",
-        "Longser",
-        "Reak",
-        "Benjang",
-        "Tembang Sunda dan Mamaos Cianjuran",
-        "persebaran",
+        "suku",
         "aksara",
-        "Bahasa",
-        "ciri khas",
-        "seni tari",
-        "tari Sunda",
-        "Jawa Barat",
-        "tari tradisional",
-        "musik tradisional",
-        "Kujang",
-        "Golok",
-        "Bandik",
-        "gamelan",
-        "kendang",
-        "rebab",
-        "gong",
+        "persebaran",
+        "bahasa",
+        "ciri",
+        "khas",
+        "sejarah",
+        "kerajaan",
+        "filosofi",
+        "filsafah",
+        "nilai",
+        "lagu",
+        "jenis",
+        "rumah",
+        "adat",
+        "julang ngapak",
+        "capit gunting",
+        "buka pongpok",
+        "Badak heuay",
+        "tagog anjing",
+        "mainan",
+        "congklak",
+        "egrang",
+        "gasing",
+        "dakon",
+        "engklek",
+        "sondah)",
+        "oray-orayan",
+        "bebentengan",
+        "galah asin",
+        "galasin",
+        "kelereng",
+        "alat",
+        "musik",
+        "angklung",
+        "calung",
         "kecapi",
-        "tari Jaipongan",
-        "Gugum Gumbira",
-        "tari Merak",
-        "tari Topeng",
-        "tari Buyung",
-        "tari Ketuk Tilu",
-        "tari ronggeng",
-        "nilai budaya",
-        "tarian rakyat",
-        "pelestarian budaya",
-        "sanggar tari",
-        "kesopanan",
-        "gotong royong",
-        "pencak silat",
-        "upacara adat",
-        "acara panen",
-        "penyambutan tamu",
-        "kostum tari",
-        "karakter topeng",
-        "festival budaya",
-        "nilai tradisi",
-        "generasi muda",
-        "budaya Sunda",
-        "warisan budaya",
-        "macam macam",
+        "suling",
+        "gendang",
+        "tarawangsa",
+        "rebab",
+        "karinding",
+        "celempung",
+        "terebang",
+        "masakan",
+        "makanan",
+        "nasi liwet",
+        "nasi tutug oncom",
+        "karedok",
+        "lotek",
+        "sayur asem",
+        "lalapan",
+        "sambal terasi",
+        "pepes ikan",
+        "gepuk",
+        "bakakak hayam",
+        "serabi",
+        "cimplung",
+        "gemblong",
+        "macam",
+        "makna",
+        "pakaian",
+        "senjata",
+        "kujang",
+        "golok",
+        "bandik",
+        "wayang golek",
+        "longser",
+        "sandiwara",
+        "reak",
+        "dogdog",
+        "benjang",
+        "tari",
+        "topeng",
+        "tembang",
+        "mamaos",
+        "seni",
+        "pertunjukan",
+        "tradisional",
+        "jaipongan",
+        "jaipong",
+        "merak",
+        "buyung",
+        "ketuk tilu",
+        "keurseus",
+        "ronggeng gunung",
         "fungsi",
-        "nilai filosifis",
+        "pelestarian",
         "gunung",
-        "kearifan lokal", "mainan", ].includes(input)) return 3;
+        "sistem",
+        "pertanian",
+        "huma",
+        "sawah",
+        "kebun"
+    ].includes(input)) return 3;
     return 0;
 }
+
+
+
 
 function pertanyaan(input){ // mencari jawaban
     fetch("artikel2.txt")
@@ -227,25 +271,28 @@ function pertanyaan(input){ // mencari jawaban
     .then(teks => {
         let kata_tanya = input.match(/\w+/g); // ambil semua kata
         let kalimat = teks.split("|");
-        var score = 0
-        var score_akhir = 0
+        let score = 0
+        let score_akhir = 0
         for (var i = 0; i < kalimat.length; i++){
+            console.log(kalimat[i])
             for(var j = 0; j < kata_tanya.length; j++){
+              
                 if (kalimat[i].toLowerCase().includes(kata_tanya[j].toLowerCase())){
                     score += 1  
-                    var hasil=nilai(kata_tanya[j])
+                    let hasil=nilai(kata_tanya[j])
                     score += hasil
                 }
             }
             if (score > score_akhir){
                 score_akhir = score
-                var jawaban = kalimat[i]
+                let jawaban = kalimat[i]
                 var jawaban_akhir=jawaban.replace(/;/g, "<br>").trim();
 
             }
             else if(score_akhir <= 1){
                 jawaban_akhir ="Maaf jawaban tidak ada atau pertanyaan yang anda ajukan kurang jelas, tolong tanyakan kembali!"
             } 
+            console.log(score)
             score=0
 
         }  
@@ -254,11 +301,11 @@ function pertanyaan(input){ // mencari jawaban
     })
 }
 function bacakan(teks) { //menampilkan jawaban ke user dan membacakannya
-    var bersih = teks.replace(/<br>/g, "")
+    let bersih = teks.replace(/<br>/g, "")
     const speech = new SpeechSynthesisUtterance(bersih);
     speech.lang = 'id-ID'; // Bahasa Indonesia
     window.speechSynthesis.speak(speech);
-    var wadah = document.getElementById("jawab");
+    let wadah = document.getElementById("jawab");
     const pesan = document.createElement("div");
     pesan.className = "pesan";
     pesan.innerHTML = teks;
