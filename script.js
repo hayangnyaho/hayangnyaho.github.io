@@ -7,7 +7,7 @@ function jawab(){
     if (input.includes("#")) { //menentukan apkaha ini untuk ubah ke aksara
         let teksBersih = input.replace(/#/g, "").trim();
         mengubah(teksBersih, teksBersih);
-        var jawab = document.getElementById("jawab");
+        let jawab = document.getElementById("jawab");
         const pesan = document.createElement("div");
         pesan.className = "soal1";
         pesan.innerHTML = teksBersih;
@@ -32,8 +32,8 @@ function jawab(){
     //     console.log("pilihan 3")
     // }
 
-    else if(input.includes("1")){
-        let teks = input.replace(/1/g, "").trim();
+    else if(input.includes("$")){
+        let teks = input.replace(/$/g, "").trim();
         let teksBersih = teks.match(/\w+/g);
         fetch('kamus.json')
         .then(response => response.json())
@@ -60,8 +60,8 @@ function jawab(){
         inputTeks.value = "";
         console.log("pilihan 3")
     }
-    else if(input.includes("2")){
-        let teks = input.replace(/2/g, "").trim();
+    else if(input.includes("!")){
+        let teks = input.replace(/!/g, "").trim();
         let teksBersih = teks.match(/\w+/g);
         fetch('kamus.json')
         .then(response => response.json())
@@ -98,7 +98,8 @@ function jawab(){
 }
 
 function mengubah(nama,input){ // menentuakan akhiran ng dan ny
-   var text= nama.toLowerCase().match(/ng|ny|[bcdfghjklmnpqrstvwxyz]?[aiueoé]|[bcdfghjklmnpqrstvwxyz]{1}|[\s]/gi);
+   let text= nama.toLowerCase().match(/ng|ny|[bcdfghjklmnpqrstvwxyz]?[aiueoé]|[bcdfghjklmnpqrstvwxyz]{1}|[0-9]|[.]|[,]|[\s]/gi) || [];
+   console.log(text)
    for (let i = 0; i < text.length - 1; i++) {
     if (text[i] === 'ny'& ["a","i","u","e","o","é"].includes(text[i+1])) {
         text[i] = text[i] + text[i + 1]; 
@@ -122,7 +123,14 @@ function aksara(nama, input){// mengubah laten ke aksara
         if (aks){
             hasil += aks.aksara
         }
-            
+        if (nama[i] == "."){
+            hasil += ". "
+        }
+        if (nama[i] == ","){
+            hasil += ", "
+        }
+
+        
         else{
             hasil += " "
         }

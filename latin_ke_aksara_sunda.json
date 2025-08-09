@@ -1,5 +1,36 @@
 [
   {
+    "kode":"0",    
+    "aksara":"᮰" },  
+  {
+    "kode":"1",
+    "aksara":"᮱"},       
+  {
+    "kode":"2",
+    "aksara":"᮲"},    
+  {
+    "kode":"3",          
+    "aksara":"᮳"},       
+  {
+    "kode":"4",          
+    "aksara":"᮴"},     
+  {
+    "kode":"5",       
+    "aksara":"᮵"},  
+  {
+    "kode":"6",          
+    "aksara":"᮶"},    
+  {
+    "kode":"7",         
+    "aksara":"᮷"},
+  {
+    "kede":"8",          
+    "aksara":"᮸"},       
+  {
+    "kode":"9",          
+    "aksara":"᮹"},         
+
+  {
     "kode": "a",
     "aksara": "ᮃ"
   },
